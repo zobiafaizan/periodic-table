@@ -1,0 +1,131 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: white;
+    padding: 25px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #aab5c5;
+    font-size: 16px;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search-container input {
+    width: 350px;
+    max-width: 100%;
+    padding: 13px 18px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background: #1e293b;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-container input:focus {
+    border-color: #38bdf8;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, minmax(0, 1fr));
+    gap: 5px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.element {
+    background: #2563eb;
+    border: 1px solid #60a5fa;
+    border-radius: 5px;
+    min-height: 75px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.element:hover {
+    transform: scale(1.08);
+    background: #0ea5e9;
+}
+
+.element .number {
+    font-size: 10px;
+    display: block;
+    text-align: left;
+}
+
+.element .symbol {
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    margin: 5px 0;
+}
+
+.element .name {
+    font-size: 9px;
+    display: block;
+    overflow-wrap: anywhere;
+}
+
+.details {
+    max-width: 600px;
+    margin: 35px auto;
+    padding: 25px;
+    background: #1e293b;
+    border: 1px solid #475569;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.details h2 {
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 10px;
+    }
+
+    .periodic-table {
+        gap: 2px;
+    }
+
+    .element {
+        min-height: 50px;
+        padding: 2px;
+    }
+
+    .element .symbol {
+        font-size: 13px;
+    }
+
+    .element .name {
+        font-size: 6px;
+    }
+}
